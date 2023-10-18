@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Products</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <script src="../static/js/bootstrap.js"></script>
+</head>
+<body>
+    <div class="container bg-info">
+       <h3 class="bg-warning p-3 mt-2 text-white">Latest Phones</h3>
+       <section class="row">
+        {% for phone in phones %}
+        <div class="col-md-4 text-center">
+            <div class="card-shadow my-2">
+                <img src="../static/products/{{phone[7]}}" alt="" width="100%" height="400px" style="border-radius: 15px;">
+                <h4 class="text-center text-danger">{{phone[1]}}</h4>
+                <p class="badge bg-warning text-center">{{phone[6]}}</p>
+                <h5 class="text-center"> KSHS {{phone[3]}}</h5>
+                <a href="/single_item/{{phone[0]}}" class="btn btn-success">View Product</a>
+
+            </div>
+
+        </div>
+
+        
+        {% endfor %}
+
+       </section>
+       <br>
+
+       <h3 class="bg-warning p-3 mt-2 text-white">Laptop Deals</h3>
+       <section class="row">
+        {% for laptop in laptops %}
+        <div class="col-md-4 text-center">
+            <div class="card-shadow my-2">
+                <img src="../static/products/{{laptop[7]}}" alt="" width="100%" height="400px" style="border-radius: 15px;">
+                <h4 class="text-center text-danger me-4">{{laptop[1]}}</h4>
+                <p class="badge bg-warning text-center">{{laptop[6]}}</p>
+                <h5 class="text-center">KSHS {{laptop[3]}}</h5>
+                <a href="single_item/{{laptop[0]}}" class="btn btn-success">View Product</a>
+
+            </div>
+
+        </div>
+
+        
+        {% endfor %}
+
+       </section>
+       <br>
+
+       <h3 class="bg-warning p-3 mt-2 text-white">Shoe Deals</h3>
+       <section class="row">
+        {% for shoe in shoes %}
+            <div class="col-md-4 text-center">
+            <div class="card-shadow my-2">
+                <img src="../static/products/{{shoe[7]}}" alt="" width="100%" height="400px" style="border-radius: 15px;">
+                <h4 class="text-center text-danger">{{shoe[1]}}</h4>
+                <p class="badge bg-warning text-center">{{shoe[6]}}</p>
+                <h5 class="text-center">KSHS {{shoe[3]}}</h5>
+                <a href="single_item/{{shoe[0]}}" class="btn btn-success">View Product</a>
+
+            </div>
+
+        </div>
+
+        
+        {% endfor %}
+
+       </section>
+
+    </div>
+    
+</body>
+</html>

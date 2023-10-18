@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <script src="../static/js/bootstrap.js"></script>
+</head>
+<body>
+    {{message}}
+    <table class="table table-striped">
+        <tr><th>Name</th>
+            <th>Email</th>
+            <th>Feedback</th>
+            <th>Date Added</th>
+        </tr>
+        {% for feedback in feedback %}
+        <tr>
+            <td>{{feedback[1]}}</td>
+            <td>{{feedback[2]}}</td>
+            <td>{{feedback[3]}}</td>
+            <td>{{feedback[4]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+</body>
+</html>

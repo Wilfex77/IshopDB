@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+</head>
+<body>
+    <div class="container bg-info">
+        <div class="modal-dialog modal-scrollable p-3 m-3">
+            <div class="modal-content">
+               <div class="modal-header">
+                <h5>Update Your Product</h5>
+                <button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
+               </div>
+
+               <div class="modal-body">
+                <div class="card shadow m-3 p-3 bg-info">
+                    <h5 class="mt-2">{{message}}</h5>
+                    <form action="http://127.0.0.1:5000//update/{{data[0]}}" method="post" enctype="multipart/form-data">
+                    <label for="name" class="form-label">Product Name</label>
+                    <input type="text" name="name" id="name" class="form-control" value="{{data[1]}}">
+                    <label for="desc" class="form-label">Product Description</label>
+                    <textarea name="desc" id="desc" cols="30" rows="10" class="form-control"></textarea>
+                    <label for="cost" class="form-label">Product Cost</label>
+                    <input type="number" name="cost" id="cost" class="form-control" value="{{data[3]}}">
+                    <label for="discount" class="form-label">Product Discount</label>
+                    <input type="number" name="discount" id="discount" class="form-control" value="{{data[4]}}">
+                    <label for="category" class="form-label">Product Category</label>
+                    <select name="category" id="category" class="form-control" value="{{data[5]}}">
+                        <option value="phones">Phones</option>
+                        <option value="laptops">Laptops</option>
+                        <option value="shoes">Shoes</option>
+                        <option value="food">Food</option>
+                        <option value="games and consoles">Games and consoles</option>
+                        <option value="cosmetics">Cosmetics</option>
+
+                    </select>
+                    <label for="brand" class="form-label">Product Brand</label>
+                    <input type="text" name="brand" id="brand" class="form-control" value="{{data[6]}}">
+                    <label for="image" class="form-label">Product Image</label>
+                    <input type="file" name="image" id="image" class="form-control" value="{{data[7]}}"><br>
+                    <input type="number" name="vendor" id="vendor" placeholder="Vendor Id" class="form-control">
+                    <input type="submit" value="Add Product" class="btn btn-success">
+
+                    </form>
+                    
+
+                </div>
+
+
+               </div>
+
+            </div>
+
+        </div >
+
+    </div>
+
+    
+</body>
+</html>
